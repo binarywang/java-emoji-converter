@@ -1,7 +1,9 @@
-package cn.binarywang.java.emoji;
+package com.github.binarywang.java.emoji;
 
 import org.junit.Assert;
 import org.junit.Test;
+
+import com.github.binarywang.java.emoji.EmojiConverter;
 
 public class EmojiConverterTest {
 

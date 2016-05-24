@@ -1,4 +1,4 @@
-package cn.binarywang.java.emoji.model;
+package com.github.binarywang.java.emoji.model;
 
 
 import java.util.List;

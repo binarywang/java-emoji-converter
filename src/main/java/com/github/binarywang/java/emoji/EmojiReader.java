@@ -1,4 +1,4 @@
-package cn.binarywang.java.emoji;
+package com.github.binarywang.java.emoji;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -8,14 +8,13 @@ import java.util.Map;
 
 import org.joda.time.Interval;
 
+import com.github.binarywang.java.emoji.model.Emoji4Unicode;
+import com.github.binarywang.java.emoji.model.Emoji4Unicode.Category;
+import com.github.binarywang.java.emoji.model.Emoji4Unicode.Element;
+import com.github.binarywang.java.emoji.model.Emoji4Unicode.SubCategory;
 import com.google.common.collect.Maps;
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.io.xml.DomDriver;
-
-import cn.binarywang.java.emoji.model.Emoji4Unicode;
-import cn.binarywang.java.emoji.model.Emoji4Unicode.Category;
-import cn.binarywang.java.emoji.model.Emoji4Unicode.Element;
-import cn.binarywang.java.emoji.model.Emoji4Unicode.SubCategory;
 
 public class EmojiReader {
     private static final String url = "https://raw.githubusercontent.com/googlei18n/emoji4unicode/master/data/emoji4unicode.xml";

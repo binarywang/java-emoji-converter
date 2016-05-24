@@ -1,4 +1,4 @@
-package cn.binarywang.java.emoji;
+package com.github.binarywang.java.emoji;
 
 import java.util.List;
 import java.util.Map;
@@ -7,7 +7,8 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.junit.Assert;
 import org.junit.Test;
 
-import cn.binarywang.java.emoji.model.Emoji4Unicode;
+import com.github.binarywang.java.emoji.EmojiReader;
+import com.github.binarywang.java.emoji.model.Emoji4Unicode;
 
 public class EmojiReaderTest {
 
