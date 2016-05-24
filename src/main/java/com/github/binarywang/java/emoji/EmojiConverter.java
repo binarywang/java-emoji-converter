@@ -19,7 +19,7 @@ public class EmojiConverter {
      * convert emoji string with unicode/softbank to strings with aliases
      * 
      * @param input
-     * @return
+     * @return result string
      */
     public String toAlias(String input) {
         if (EmojiUtils.containsSbEmoji(input)) {
@@ -91,7 +91,7 @@ public class EmojiConverter {
      * convert emoji string with unicode/softbank to strings with html code
      * 
      * @param input
-     * @return
+     * @return result string
      */
     public String toHtml(String input) {
         if (EmojiUtils.containsSbEmoji(input)) {
@@ -110,7 +110,7 @@ public class EmojiConverter {
      * convert string with softbank/alias emoji to strings with unicode
      * 
      * @param input
-     * @return
+     * @return result string
      */
     public String toUnicode(String input) {
         if (EmojiUtils.containsSbEmoji(input)) {
