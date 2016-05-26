@@ -5,6 +5,9 @@
 	<artifactId>java-emoji-converter</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
+	<name>Java Emoji Converter</name>
+	<description>Java Emoji Converter</description>
+	<url>https://github.com/binarywang/java-emoji-converter</url>
 	<scm>
 		<connection>scm:git:https://github.com/binarywang/java-emoji-converter.git</connection>
 		<developerConnection>scm:git:https://github.com/binarywang/java-emoji-converter.git</developerConnection>
