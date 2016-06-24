@@ -10,8 +10,6 @@ https://raw.githubusercontent.com/googlei18n/emoji4unicode/master/data/emoji4uni
 
 
 # Usage：
-···
-public class EmojiConverterTest {
 
     private EmojiConverter emojiConverter = EmojiConverter.getInstance();
 
@@ -48,6 +46,3 @@ public class EmojiConverterTest {
         System.err.println(result);
         Assert.assertEquals("🙅 🙆 💑 😃 😀 😉", result);
     }
-
-}
-···
