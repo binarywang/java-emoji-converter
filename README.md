@@ -8,8 +8,19 @@ A tool to convert emoji string among each type,  like softbank emoji, unicode em
 When converting softbank emoji to unicode, we utilize this file:
 https://raw.githubusercontent.com/googlei18n/emoji4unicode/master/data/emoji4unicode.xml
 
+## Quick Start
 
-# Usage：
+Add this in your maven pom file:
+
+```xml
+<dependency>
+  <groupId>com.github.binarywang</groupId>
+  <artifactId>java-emoji-converter</artifactId>
+  <version>0.0.1</version>
+</dependency>
+```
+
+## Usage (from junit test)：
 
     private EmojiConverter emojiConverter = EmojiConverter.getInstance();
 
