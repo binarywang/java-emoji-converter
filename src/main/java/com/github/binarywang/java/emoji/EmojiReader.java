@@ -49,7 +49,7 @@ public class EmojiReader {
         String interval = new Interval(beginTime, System.currentTimeMillis())
             .toPeriod().toString().replace("PT", "").replace("M", "分")
             .replace("S", "秒");
-        System.err.println(" 耗时： " + interval);
+        System.err.println("耗时： " + interval);
         return emoji;
     }
 
