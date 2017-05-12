@@ -1,22 +1,30 @@
 package com.github.binarywang.java.emoji;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.apache.log4j.BasicConfigurator;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.testng.annotations.*;
 
-import com.github.binarywang.java.emoji.EmojiConverter;
+import static org.testng.Assert.*;
 
 public class EmojiConverterTest {
+    private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
     private EmojiConverter emojiConverter = EmojiConverter.getInstance();
+
+    @BeforeTest
+    public void init(){
+        BasicConfigurator.configure();
+    }
 
     @Test
     public void testToAlias() {
         String str = "  An 😃😀awesome 😃😃string with a few 😃😉emojis!";
         String alias = this.emojiConverter.toAlias(str);
-        System.out.println(str);
-        System.out.println("EmojiConverterTest.testToAlias()=====>");
-        System.out.println(alias);
-        Assert.assertEquals(
+        this.logger.info(str);
+        this.logger.info("EmojiConverterTest.testToAlias()=====>");
+        this.logger.info(alias);
+        assertEquals(
             ":no_good: :ok_woman: :couple_with_heart:An :smiley::grinning:awesome :smiley::smiley:string with a few :smiley::wink:emojis!",
             alias);
     }
@@ -25,10 +33,10 @@ public class EmojiConverterTest {
     public void testToHtml() {
         String str = "  An 😀😃awesome 😃😃string with a few 😉😃emojis!";
         String result = this.emojiConverter.toHtml(str);
-        System.out.println(str);
-        System.out.println("EmojiConverterTest.testToHtml()=====>");
-        System.out.println(result);
-        Assert.assertEquals(
+        this.logger.info(str);
+        this.logger.info("EmojiConverterTest.testToHtml()=====>");
+        this.logger.info(result);
+        assertEquals(
             "&#128581; &#128582; &#128145;An &#128512;&#128515;awesome &#128515;&#128515;string with a few &#128521;&#128515;emojis!",
             result);
     }
@@ -37,10 +45,10 @@ public class EmojiConverterTest {
     public void testToUnicode() {
         String str = "   :smiley: :grinning: :wink:";
         String result = this.emojiConverter.toUnicode(str);
-        System.err.println(str);
-        System.err.println("EmojiConverterTest.testToUnicode()=====>");
-        System.err.println(result);
-        Assert.assertEquals("🙅 🙆 💑 😃 😀 😉", result);
+        this.logger.info(str);
+        this.logger.info("EmojiConverterTest.testToUnicode()=====>");
+        this.logger.info(result);
+        assertEquals("🙅 🙆 💑 😃 😀 😉", result);
     }
 
 }

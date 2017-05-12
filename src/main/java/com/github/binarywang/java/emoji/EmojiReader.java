@@ -1,13 +1,5 @@
 package com.github.binarywang.java.emoji;
 
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-
-import org.joda.time.Interval;
-
 import com.github.binarywang.java.emoji.model.Emoji4Unicode;
 import com.github.binarywang.java.emoji.model.Emoji4Unicode.Category;
 import com.github.binarywang.java.emoji.model.Emoji4Unicode.Element;
@@ -15,8 +7,17 @@ import com.github.binarywang.java.emoji.model.Emoji4Unicode.SubCategory;
 import com.google.common.collect.Maps;
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.io.xml.DomDriver;
+import org.joda.time.Interval;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 
 public class EmojiReader {
+    private static final Logger logger = LoggerFactory.getLogger(EmojiReader.class);
     private static final String url = "https://raw.githubusercontent.com/googlei18n/emoji4unicode/master/data/emoji4unicode.xml";
 
     private static final String TRIM_PATTERN = "[^0-9A-F]*";
@@ -35,13 +36,13 @@ public class EmojiReader {
 
         try {
             emoji = (Emoji4Unicode) xstream.fromXML(new URL(url));
-            System.err.println("==============from url==============");
-        } catch (MalformedURLException e) {
+            logger.info("==============from url==============");
+        } catch (Exception e) {
             e.printStackTrace();
         }
 
         if (emoji == null) {
-            System.err.println("==============from local file==============");
+            logger.info("==============from local file==============");
             return (Emoji4Unicode) xstream.fromXML(
                 EmojiReader.class.getResourceAsStream("/emoji4unicode.xml"));
         }
@@ -49,7 +50,7 @@ public class EmojiReader {
         String interval = new Interval(beginTime, System.currentTimeMillis())
             .toPeriod().toString().replace("PT", "").replace("M", "分")
             .replace("S", "秒");
-        System.err.println("耗时： " + interval);
+        logger.info("耗时： " + interval);
         return emoji;
     }
 

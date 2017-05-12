@@ -1,11 +1,14 @@
 package com.github.binarywang.java.emoji;
 
+import com.vdurmont.emoji.EmojiParser;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.util.ArrayList;
 import java.util.List;
 
-import com.vdurmont.emoji.EmojiParser;
-
 public class EmojiConverter {
+    private static final Logger logger = LoggerFactory.getLogger(EmojiConverter.class);
 
     private static EmojiConverter instance = new EmojiConverter();
     private EmojiConverter() {
