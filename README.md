@@ -10,10 +10,9 @@ A tool to convert emoji string among each type,  like softbank emoji, unicode em
 When converting softbank emoji to unicode, we utilize this file:
 https://raw.githubusercontent.com/googlei18n/emoji4unicode/master/data/emoji4unicode.xml
 
-## Quick Start
+## Quick Start 快速入门
 
-Add this in your maven pom file:
-
+Add this in your maven pom file（将以下内容加入你的maven的pom文件中）：
 ```xml
 <dependency>
   <groupId>com.github.binarywang</groupId>
@@ -22,7 +21,7 @@ Add this in your maven pom file:
 </dependency>
 ```
 
-## Usage (from junit test)：
+## Usage (from junit test)：用法（摘自单元测试代码）
 
     private EmojiConverter emojiConverter = EmojiConverter.getInstance();
 
