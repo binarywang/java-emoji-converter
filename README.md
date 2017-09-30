@@ -17,7 +17,7 @@ Add this in your maven pom file（将以下内容加入你的maven的pom文件�
 <dependency>
   <groupId>com.github.binarywang</groupId>
   <artifactId>java-emoji-converter</artifactId>
-  <version>0.1.0</version>
+  <version>0.1.1</version>
 </dependency>
 ```
 
