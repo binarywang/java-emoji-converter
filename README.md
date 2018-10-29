@@ -1,8 +1,9 @@
-
+[![码云Gitee](https://gitee.com/binary/java-emoji-converter/badge/star.svg?theme=blue)](https://gitee.com/binary/java-emoji-converter)
+[![Github](http://github-svg-buttons.herokuapp.com/star.svg?user=binarywang&repo=java-emoji-converter&style=flat&background=1081C1)](https://github.com/binarywang/java-emoji-converter)
 [![Build Status](https://travis-ci.org/binarywang/java-emoji-converter.svg?branch=master)](https://travis-ci.org/binarywang/java-emoji-converter)
 ![Maven Central](https://img.shields.io/maven-central/v/com.github.binarywang/java-emoji-converter.svg)
 
-# Java Emoji Converter （Emoji表情转换工具）
+# Java Emoji Converter（Emoji表情转换工具）
 
 Emoji转换工具，便于各种规格客户端生成的Emoji字符串转换成另外一种格式。
 A tool to convert emoji string among each type,  like softbank emoji, unicode emoji, alias emoji, html emoji.
