@@ -14,6 +14,7 @@ import static org.testng.AssertJUnit.*;
 
 public class EmojiReaderTest {
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
+    private EmojiReader emojiReader = new EmojiReader();
 
     @BeforeTest
     public void init(){
@@ -22,14 +23,14 @@ public class EmojiReaderTest {
 
     @Test
     public void testRead() {
-        Emoji4Unicode a = EmojiReader.read();
+        Emoji4Unicode a = this.emojiReader.read(false);
         this.logger.info(ToStringBuilder.reflectionToString(a));
         assertNotNull(a);
     }
 
     @Test
-    public void testReadSb2UnicodeMap() {
-        Map<List<Integer>, String> sb2UnicodeMap = EmojiReader.readSb2UnicodeMap();
+    public void testGetSb2UnicodeMap() {
+        Map<List<Integer>, String> sb2UnicodeMap = this.emojiReader.getSb2UnicodeMap();
 
         this.logger.info(sb2UnicodeMap.toString());
         assertNotNull(sb2UnicodeMap);
