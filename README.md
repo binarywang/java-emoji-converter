@@ -7,6 +7,7 @@
 # Java Emoji Converter（Emoji 表情转换工具）
 
 Emoji转换工具，便于各种规格客户端生成的Emoji字符串转换成另外一种格式。
+
 A tool to convert emoji string among each type,  like softbank emoji, unicode emoji, alias emoji, html emoji.
 
 When converting softbank emoji to unicode, we utilize this file:
