@@ -10,7 +10,7 @@ import static org.testng.Assert.*;
 public class EmojiConverterTest {
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
-    private EmojiConverter emojiConverter = EmojiConverter.getInstance();
+    private final EmojiConverter emojiConverter = EmojiConverter.getInstance();
 
     @BeforeTest
     public void init(){
