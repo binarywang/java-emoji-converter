@@ -1,6 +1,7 @@
 [![码云Gitee](https://gitee.com/binary/java-emoji-converter/badge/star.svg?theme=blue)](https://gitee.com/binary/java-emoji-converter)
 [![Github](http://github-svg-buttons.herokuapp.com/star.svg?user=binarywang&repo=java-emoji-converter&style=flat&background=1081C1)](https://github.com/binarywang/java-emoji-converter)
 [![Build Status](https://travis-ci.org/binarywang/java-emoji-converter.svg?branch=master)](https://travis-ci.org/binarywang/java-emoji-converter)
+[![codecov](https://codecov.io/gh/binarywang/java-emoji-converter/branch/master/graph/badge.svg)](https://codecov.io/gh/binarywang/java-emoji-converter)
 ![Maven Central](https://img.shields.io/maven-central/v/com.github.binarywang/java-emoji-converter.svg)
 
 # Java Emoji Converter（Emoji 表情转换工具）
