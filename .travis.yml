@@ -11,3 +11,6 @@ branches:
 notifications:
   email:
     - binarywang@vip.qq.com
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
