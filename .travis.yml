@@ -6,7 +6,7 @@ script: "mvn cobertura:cobertura"
 
 branches:
   only:
-    - master
+    - main
 
 notifications:
   email:
