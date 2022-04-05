@@ -7,6 +7,8 @@ import com.github.binarywang.java.emoji.model.Emoji4Unicode.SubCategory;
 import com.google.common.collect.Maps;
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.io.xml.DomDriver;
+import com.thoughtworks.xstream.security.NoTypePermission;
+import com.thoughtworks.xstream.security.WildcardTypePermission;
 import org.joda.time.Interval;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -42,6 +44,8 @@ public class EmojiReader {
 
         XStream xstream = new XStream(new DomDriver());
         xstream.processAnnotations(Emoji4Unicode.class);
+        xstream.addPermission(NoTypePermission.NONE);
+        xstream.addPermission(new WildcardTypePermission(new String[]{"com.github.binarywang.**"}));
 
         if (onlyFromLocal) {
             logger.info("==============from local file==============");
